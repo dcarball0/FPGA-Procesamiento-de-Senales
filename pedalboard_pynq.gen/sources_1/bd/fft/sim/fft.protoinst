@@ -921,17 +921,6 @@
 						"TVALID": { "actual": "m_axis_tvalid"}
 					}
 				},
-				"/axis_subset_converter_0/S_AXIS": {
-					"interface": "xilinx.com:interface:axis:1.0",
-					"ports": {
-						"ACLK": { "actual": "aclk"},
-						"ARESETN": { "actual": "aresetn"},
-						"TDATA": { "actual": "s_axis_tdata[31:0]"},
-						"TID": { "actual": "s_axis_tid[2:0]"},
-						"TREADY": { "actual": "s_axis_tready"},
-						"TVALID": { "actual": "s_axis_tvalid"}
-					}
-				},
 				"/fft_block/M_AXI_MM2S": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
@@ -1338,6 +1327,17 @@
 						"WDATA": { "actual": "s_axi_ctrl_wdata[31:0]"},
 						"WREADY": { "actual": "s_axi_ctrl_wready"},
 						"WVALID": { "actual": "s_axi_ctrl_wvalid"}
+					}
+				},
+				"/i2s_transmitter_0/s_axis_aud": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "s_axis_aud_aclk"},
+						"ARESETN": { "actual": "s_axis_aud_aresetn"},
+						"TDATA": { "actual": "s_axis_aud_tdata[31:0]"},
+						"TID": { "actual": "s_axis_aud_tid[2:0]"},
+						"TREADY": { "actual": "s_axis_aud_tready"},
+						"TVALID": { "actual": "s_axis_aud_tvalid"}
 					}
 				},
 				"/processing_system7_0/M_AXI_GP0": {

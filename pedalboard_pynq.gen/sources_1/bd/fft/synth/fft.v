@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-//Date        : Mon Jun 10 22:56:15 2024
+//Date        : Wed Jun 12 00:20:54 2024
 //Host        : DESKTOP-KEHOVS5 running 64-bit major release  (build 9200)
 //Command     : generate_target fft.bd
 //Design      : fft
@@ -33,9 +33,6 @@ module fft
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    IIC_1_scl_io,
-    IIC_1_sda_io,
-    audio_clk_10MHz,
     audio_i2c_scl_i,
     audio_i2c_scl_o,
     audio_i2c_scl_t,
@@ -67,9 +64,6 @@ module fft
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
-  inout IIC_1_scl_io;
-  inout IIC_1_sda_io;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.AUDIO_CLK_10MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.AUDIO_CLK_10MHZ, ASSOCIATED_RESET reset_rtl, CLK_DOMAIN fft_audio_clk_10MHz, FREQ_HZ 10000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input audio_clk_10MHz;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 audio_i2c SCL_I" *) input audio_i2c_scl_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 audio_i2c SCL_O" *) output audio_i2c_scl_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 audio_i2c SCL_T" *) output audio_i2c_scl_t;
@@ -139,7 +133,6 @@ module fft
   wire S03_AXI_1_WREADY;
   wire [3:0]S03_AXI_1_WSTRB;
   wire S03_AXI_1_WVALID;
-  wire audio_clk_10MHz_1;
   wire axi_iic_0_IIC_SCL_I;
   wire axi_iic_0_IIC_SCL_O;
   wire axi_iic_0_IIC_SCL_T;
@@ -357,7 +350,6 @@ module fft
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
   wire sdata_i_1;
 
-  assign audio_clk_10MHz_1 = audio_clk_10MHz;
   assign audio_i2c_scl_o = axi_iic_0_IIC_SCL_O;
   assign audio_i2c_scl_t = axi_iic_0_IIC_SCL_T;
   assign audio_i2c_sda_o = axi_iic_0_IIC_SDA_O;
@@ -523,12 +515,11 @@ module fft
         .m_axis_tlast(axis_subset_converter_0_M_AXIS_TLAST),
         .m_axis_tready(axis_subset_converter_0_M_AXIS_TREADY),
         .m_axis_tvalid(axis_subset_converter_0_M_AXIS_TVALID),
-        .s_axis_tdata(i2s_receiver_0_m_axis_aud_TDATA),
-        .s_axis_tid(i2s_receiver_0_m_axis_aud_TID),
-        .s_axis_tready(i2s_receiver_0_m_axis_aud_TREADY),
-        .s_axis_tvalid(i2s_receiver_0_m_axis_aud_TVALID));
+        .s_axis_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axis_tid({1'b0,1'b0,1'b0}),
+        .s_axis_tvalid(1'b0));
   fft_clk_wiz_0_0 clk_wiz_0
-       (.clk_in1(audio_clk_10MHz_1),
+       (.clk_in1(processing_system7_0_FCLK_CLK0),
         .clk_out1(clk_wiz_0_clk_out1),
         .locked(clk_wiz_0_locked),
         .resetn(rst_ps7_0_100M_peripheral_aresetn));
@@ -694,11 +685,12 @@ module fft
         .s_axi_ctrl_wdata(ps7_0_axi_periph_M04_AXI_WDATA),
         .s_axi_ctrl_wready(ps7_0_axi_periph_M04_AXI_WREADY),
         .s_axi_ctrl_wvalid(ps7_0_axi_periph_M04_AXI_WVALID),
-        .s_axis_aud_aclk(audio_clk_10MHz_1),
+        .s_axis_aud_aclk(processing_system7_0_FCLK_CLK0),
         .s_axis_aud_aresetn(rst_ps7_0_100M_peripheral_aresetn),
-        .s_axis_aud_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axis_aud_tid({1'b0,1'b0,1'b0}),
-        .s_axis_aud_tvalid(1'b0),
+        .s_axis_aud_tdata(i2s_receiver_0_m_axis_aud_TDATA),
+        .s_axis_aud_tid(i2s_receiver_0_m_axis_aud_TID),
+        .s_axis_aud_tready(i2s_receiver_0_m_axis_aud_TREADY),
+        .s_axis_aud_tvalid(i2s_receiver_0_m_axis_aud_TVALID),
         .sclk_in(bclk_1),
         .sdata_0_out(i2s_transmitter_0_sdata_0_out));
   fft_processing_system7_0_1 processing_system7_0
