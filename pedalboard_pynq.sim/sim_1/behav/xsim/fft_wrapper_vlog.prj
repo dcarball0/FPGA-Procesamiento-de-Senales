@@ -1,16 +1,16 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/ec67/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/6b2b/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/c2c6" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/434f/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft_xadc/ipshared/ec67/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft_xadc/ipshared/6b2b/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft_xadc/ipshared/434f/hdl" --include "D:/TFG/Vivado/2023.2/data/xilinx_vip/include" \
+verilog xil_defaultlib  --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/ec67/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/6b2b/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/c2c6" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/434f/hdl" --include "D:/TFG/Vivado/2023.2/data/xilinx_vip/include" \
 "../../../../pedalboard_pynq.ip_user_files/bd/fft/ip/fft_processing_system7_0_1/sim/fft_processing_system7_0_1.v" \
 "../../../../pedalboard_pynq.ip_user_files/bd/fft/ip/fft_xbar_0/sim/fft_xbar_0.v" \
 "../../../../pedalboard_pynq.ip_user_files/bd/fft/ip/fft_xbar_1/sim/fft_xbar_1.v" \
 "../../../../pedalboard_pynq.ip_user_files/bd/fft/ip/fft_clk_wiz_0_0/fft_clk_wiz_0_0_clk_wiz.v" \
 "../../../../pedalboard_pynq.ip_user_files/bd/fft/ip/fft_clk_wiz_0_0/fft_clk_wiz_0_0.v" \
 
-sv xil_defaultlib  --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/ec67/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/6b2b/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/c2c6" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/434f/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft_xadc/ipshared/ec67/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft_xadc/ipshared/6b2b/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft_xadc/ipshared/434f/hdl" --include "D:/TFG/Vivado/2023.2/data/xilinx_vip/include" \
+sv xil_defaultlib  --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/ec67/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/6b2b/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/c2c6" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/434f/hdl" --include "D:/TFG/Vivado/2023.2/data/xilinx_vip/include" \
 "../../../../pedalboard_pynq.ip_user_files/bd/fft/ip/fft_i2s_receiver_0_3/sim/fft_i2s_receiver_0_3.sv" \
 "../../../../pedalboard_pynq.ip_user_files/bd/fft/ip/fft_i2s_transmitter_0_2/sim/fft_i2s_transmitter_0_2.sv" \
 
-verilog xil_defaultlib  --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/ec67/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/6b2b/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/c2c6" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/434f/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft_xadc/ipshared/ec67/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft_xadc/ipshared/6b2b/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft_xadc/ipshared/434f/hdl" --include "D:/TFG/Vivado/2023.2/data/xilinx_vip/include" \
+verilog xil_defaultlib  --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/ec67/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/6b2b/hdl" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/c2c6" --include "../../../../pedalboard_pynq.gen/sources_1/bd/fft/ipshared/434f/hdl" --include "D:/TFG/Vivado/2023.2/data/xilinx_vip/include" \
 "../../../../pedalboard_pynq.ip_user_files/bd/fft/ip/fft_axis_subset_converter_0_1/hdl/tdata_fft_axis_subset_converter_0_1.v" \
 "../../../../pedalboard_pynq.ip_user_files/bd/fft/ip/fft_axis_subset_converter_0_1/hdl/tuser_fft_axis_subset_converter_0_1.v" \
 "../../../../pedalboard_pynq.ip_user_files/bd/fft/ip/fft_axis_subset_converter_0_1/hdl/tstrb_fft_axis_subset_converter_0_1.v" \
@@ -22,7 +22,6 @@ verilog xil_defaultlib  --include "../../../../pedalboard_pynq.gen/sources_1/bd/
 "../../../../pedalboard_pynq.ip_user_files/bd/fft/ip/fft_axis_subset_converter_0_1/sim/fft_axis_subset_converter_0_1.v" \
 "../../../../pedalboard_pynq.ip_user_files/bd/fft/sim/fft.v" \
 "../../../../pedalboard_pynq.ip_user_files/bd/fft/ip/fft_auto_pc_0/sim/fft_auto_pc_0.v" \
-"../../../../pedalboard_pynq.ip_user_files/bd/fft/ip/fft_s00_mmu_0/sim/fft_s00_mmu_0.v" \
 "../../../../pedalboard_pynq.ip_user_files/bd/fft/ip/fft_auto_us_0/sim/fft_auto_us_0.v" \
 "../../../../pedalboard_pynq.ip_user_files/bd/fft/ip/fft_auto_us_1/sim/fft_auto_us_1.v" \
 "../../../../pedalboard_pynq.ip_user_files/bd/fft/ip/fft_auto_pc_1/sim/fft_auto_pc_1.v" \
