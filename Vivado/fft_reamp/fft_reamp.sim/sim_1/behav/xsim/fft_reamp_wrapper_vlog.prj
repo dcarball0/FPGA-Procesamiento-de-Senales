@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../fft_reamp.gen/sources_1/bd/fft_reamp/ipshared/ec67/hdl" --include "../../../../fft_reamp.gen/sources_1/bd/fft_reamp/ipshared/6b2b/hdl" --include "D:/TFG/Vivado/2023.2/data/xilinx_vip/include" \
+"../../../../fft_reamp.gen/sources_1/bd/fft_reamp/ip/fft_reamp_processing_system7_0_0/sim/fft_reamp_processing_system7_0_0.v" \
+"../../../../fft_reamp.gen/sources_1/bd/fft_reamp/ip/fft_reamp_xbar_0/sim/fft_reamp_xbar_0.v" \
+"../../../../fft_reamp.gen/sources_1/bd/fft_reamp/ip/fft_reamp_auto_pc_0/sim/fft_reamp_auto_pc_0.v" \
+"../../../../fft_reamp.gen/sources_1/bd/fft_reamp/ip/fft_reamp_xbar_1/sim/fft_reamp_xbar_1.v" \
+"../../../../fft_reamp.gen/sources_1/bd/fft_reamp/ip/fft_reamp_auto_us_0/sim/fft_reamp_auto_us_0.v" \
+"../../../../fft_reamp.gen/sources_1/bd/fft_reamp/ip/fft_reamp_auto_us_1/sim/fft_reamp_auto_us_1.v" \
+"../../../../fft_reamp.gen/sources_1/bd/fft_reamp/ip/fft_reamp_auto_pc_1/sim/fft_reamp_auto_pc_1.v" \
+"../../../../fft_reamp.gen/sources_1/bd/fft_reamp/ip/fft_reamp_AXI_Rectification_0_0/sim/fft_reamp_AXI_Rectification_0_0.v" \
+"../../../../fft_reamp.gen/sources_1/bd/fft_reamp/sim/fft_reamp.v" \
+"../../../../fft_reamp.gen/sources_1/bd/fft_reamp/hdl/fft_reamp_wrapper.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

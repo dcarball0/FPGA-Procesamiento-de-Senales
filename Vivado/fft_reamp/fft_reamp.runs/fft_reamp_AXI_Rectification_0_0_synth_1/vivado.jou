@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Jun 21 20:42:55 2024
+# Process ID: 20272
+# Current directory: D:/TFG/_proyecto/fft_reamp/fft_reamp.runs/fft_reamp_AXI_Rectification_0_0_synth_1
+# Command line: vivado.exe -log fft_reamp_AXI_Rectification_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fft_reamp_AXI_Rectification_0_0.tcl
+# Log file: D:/TFG/_proyecto/fft_reamp/fft_reamp.runs/fft_reamp_AXI_Rectification_0_0_synth_1/fft_reamp_AXI_Rectification_0_0.vds
+# Journal file: D:/TFG/_proyecto/fft_reamp/fft_reamp.runs/fft_reamp_AXI_Rectification_0_0_synth_1\vivado.jou
+# Running On: DESKTOP-KEHOVS5, OS: Windows, CPU Frequency: 4492 MHz, CPU Physical cores: 16, Host memory: 33411 MB
+#-----------------------------------------------------------
+source fft_reamp_AXI_Rectification_0_0.tcl -notrace

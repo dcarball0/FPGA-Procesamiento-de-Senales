@@ -1,0 +1,311 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Sat Jun 22 02:23:34 2024
+| Host         : DESKTOP-KEHOVS5 running 64-bit major release  (build 9200)
+| Command      : report_drc -file fft_reamp_wrapper_drc_opted.rpt -pb fft_reamp_wrapper_drc_opted.pb -rpx fft_reamp_wrapper_drc_opted.rpx
+| Design       : fft_reamp_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 54
++----------+----------+-------------------------------------------------------------------+------------+
+| Rule     | Severity | Description                                                       | Violations |
++----------+----------+-------------------------------------------------------------------+------------+
+| DPIP-1   | Warning  | Input pipelining                                                  | 7          |
+| DPOP-1   | Warning  | PREG Output pipelining                                            | 4          |
+| DPOP-2   | Warning  | MREG Output pipelining                                            | 4          |
+| DPOR-1   | Warning  | Asynchronous load check                                           | 16         |
+| AVAL-4   | Advisory | enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND | 18         |
+| REQP-181 | Advisory | writefirst                                                        | 5          |
++----------+----------+-------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-1#1 Warning
+Input pipelining  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp input fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp input fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__0 input fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__0 input fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#5 Warning
+Input pipelining  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 input fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#6 Warning
+Input pipelining  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 input fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#7 Warning
+Input pipelining  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__2 input fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp output fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#2 Warning
+PREG Output pipelining  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__0 output fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#3 Warning
+PREG Output pipelining  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 output fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#4 Warning
+PREG Output pipelining  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__2 output fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp multiplier stage fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__0 multiplier stage fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#3 Warning
+MREG Output pipelining  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 multiplier stage fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#4 Warning
+MREG Output pipelining  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__2 multiplier stage fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOR-1#1 Warning
+Asynchronous load check  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 output is connected to registers with an asynchronous reset (fft_reamp_i/audio_block/AXI_Gain_0/inst/data_reg_reg[0]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#2 Warning
+Asynchronous load check  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 output is connected to registers with an asynchronous reset (fft_reamp_i/audio_block/AXI_Gain_0/inst/data_reg_reg[10]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#3 Warning
+Asynchronous load check  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 output is connected to registers with an asynchronous reset (fft_reamp_i/audio_block/AXI_Gain_0/inst/data_reg_reg[11]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#4 Warning
+Asynchronous load check  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 output is connected to registers with an asynchronous reset (fft_reamp_i/audio_block/AXI_Gain_0/inst/data_reg_reg[12]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#5 Warning
+Asynchronous load check  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 output is connected to registers with an asynchronous reset (fft_reamp_i/audio_block/AXI_Gain_0/inst/data_reg_reg[13]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#6 Warning
+Asynchronous load check  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 output is connected to registers with an asynchronous reset (fft_reamp_i/audio_block/AXI_Gain_0/inst/data_reg_reg[14]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#7 Warning
+Asynchronous load check  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 output is connected to registers with an asynchronous reset (fft_reamp_i/audio_block/AXI_Gain_0/inst/data_reg_reg[15]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#8 Warning
+Asynchronous load check  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 output is connected to registers with an asynchronous reset (fft_reamp_i/audio_block/AXI_Gain_0/inst/data_reg_reg[1]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#9 Warning
+Asynchronous load check  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 output is connected to registers with an asynchronous reset (fft_reamp_i/audio_block/AXI_Gain_0/inst/data_reg_reg[2]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#10 Warning
+Asynchronous load check  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 output is connected to registers with an asynchronous reset (fft_reamp_i/audio_block/AXI_Gain_0/inst/data_reg_reg[3]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#11 Warning
+Asynchronous load check  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 output is connected to registers with an asynchronous reset (fft_reamp_i/audio_block/AXI_Gain_0/inst/data_reg_reg[4]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#12 Warning
+Asynchronous load check  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 output is connected to registers with an asynchronous reset (fft_reamp_i/audio_block/AXI_Gain_0/inst/data_reg_reg[5]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#13 Warning
+Asynchronous load check  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 output is connected to registers with an asynchronous reset (fft_reamp_i/audio_block/AXI_Gain_0/inst/data_reg_reg[6]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#14 Warning
+Asynchronous load check  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 output is connected to registers with an asynchronous reset (fft_reamp_i/audio_block/AXI_Gain_0/inst/data_reg_reg[7]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#15 Warning
+Asynchronous load check  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 output is connected to registers with an asynchronous reset (fft_reamp_i/audio_block/AXI_Gain_0/inst/data_reg_reg[8]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPOR-1#16 Warning
+Asynchronous load check  
+DSP fft_reamp_i/audio_block/AXI_Gain_0/inst/multOp__1 output is connected to registers with an asynchronous reset (fft_reamp_i/audio_block/AXI_Gain_0/inst/data_reg_reg[9]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+AVAL-4#1 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+fft_reamp_i/fft_block/xfft_0/U0/i_synth/xfft_inst/floating_point.xfft_inst/fft/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP.qDSP[0].appDSP[0].bppDSP[0].u_l[0].use_dsp48e1.dsp: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#2 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+fft_reamp_i/fft_block/xfft_0/U0/i_synth/xfft_inst/floating_point.xfft_inst/fft/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP.qDSP[0].appDSP[0].bppDSP[0].u_l[1].use_dsp48e1.dsp: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#3 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+fft_reamp_i/fft_block/xfft_0/U0/i_synth/xfft_inst/floating_point.xfft_inst/fft/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP.qDSP[0].appDSP[0].bppDSP[1].u_l[0].use_dsp48e1.dsp: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#4 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+fft_reamp_i/fft_block/xfft_0/U0/i_synth/xfft_inst/floating_point.xfft_inst/fft/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP.qDSP[1].appDSP[0].bppDSP[0].u_l[0].use_dsp48e1.dsp: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#5 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+fft_reamp_i/fft_block/xfft_0/U0/i_synth/xfft_inst/floating_point.xfft_inst/fft/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP.qDSP[1].appDSP[0].bppDSP[0].u_l[1].use_dsp48e1.dsp: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#6 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+fft_reamp_i/fft_block/xfft_0/U0/i_synth/xfft_inst/floating_point.xfft_inst/fft/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP.qDSP[1].appDSP[0].bppDSP[1].u_l[0].use_dsp48e1.dsp: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#7 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+fft_reamp_i/fft_block/xfft_0/U0/i_synth/xfft_inst/floating_point.xfft_inst/fft/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP.qDSP[0].appDSP[0].bppDSP[0].u_l[0].use_dsp48e1.dsp: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#8 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+fft_reamp_i/fft_block/xfft_0/U0/i_synth/xfft_inst/floating_point.xfft_inst/fft/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP.qDSP[0].appDSP[0].bppDSP[0].u_l[1].use_dsp48e1.dsp: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#9 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+fft_reamp_i/fft_block/xfft_0/U0/i_synth/xfft_inst/floating_point.xfft_inst/fft/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP.qDSP[0].appDSP[0].bppDSP[1].u_l[0].use_dsp48e1.dsp: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#10 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+fft_reamp_i/fft_block/xfft_0/U0/i_synth/xfft_inst/floating_point.xfft_inst/fft/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP.qDSP[1].appDSP[0].bppDSP[0].u_l[0].use_dsp48e1.dsp: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#11 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+fft_reamp_i/fft_block/xfft_0/U0/i_synth/xfft_inst/floating_point.xfft_inst/fft/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP.qDSP[1].appDSP[0].bppDSP[0].u_l[1].use_dsp48e1.dsp: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#12 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+fft_reamp_i/fft_block/xfft_0/U0/i_synth/xfft_inst/floating_point.xfft_inst/fft/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP.qDSP[1].appDSP[0].bppDSP[1].u_l[0].use_dsp48e1.dsp: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#13 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+fft_reamp_i/fft_block/xfft_0/U0/i_synth/xfft_inst/floating_point.xfft_inst/fft/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP.qDSP[0].appDSP[0].bppDSP[0].u_l[0].use_dsp48e1.dsp: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#14 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+fft_reamp_i/fft_block/xfft_0/U0/i_synth/xfft_inst/floating_point.xfft_inst/fft/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP.qDSP[0].appDSP[0].bppDSP[0].u_l[1].use_dsp48e1.dsp: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#15 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+fft_reamp_i/fft_block/xfft_0/U0/i_synth/xfft_inst/floating_point.xfft_inst/fft/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP.qDSP[0].appDSP[0].bppDSP[1].u_l[0].use_dsp48e1.dsp: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#16 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+fft_reamp_i/fft_block/xfft_0/U0/i_synth/xfft_inst/floating_point.xfft_inst/fft/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP.qDSP[1].appDSP[0].bppDSP[0].u_l[0].use_dsp48e1.dsp: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#17 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+fft_reamp_i/fft_block/xfft_0/U0/i_synth/xfft_inst/floating_point.xfft_inst/fft/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP.qDSP[1].appDSP[0].bppDSP[0].u_l[1].use_dsp48e1.dsp: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#18 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+fft_reamp_i/fft_block/xfft_0/U0/i_synth/xfft_inst/floating_point.xfft_inst/fft/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP.qDSP[1].appDSP[0].bppDSP[1].u_l[0].use_dsp48e1.dsp: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+REQP-181#1 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (fft_reamp_i/audio_block/audio_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-181#2 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (fft_reamp_i/audio_block/clip_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-181#3 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (fft_reamp_i/audio_block/gain_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-181#4 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (fft_reamp_i/audio_block/rect_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-181#5 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (fft_reamp_i/fft_block/config_dma/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+
