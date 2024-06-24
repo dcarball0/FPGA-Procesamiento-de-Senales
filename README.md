@@ -40,4 +40,4 @@ En este TFG, abordaremos ambas perspectivas (software y hardware) y extraeremos 
 
 2. **Generar bitstream:**
    Una vez abierto el proyecto, utilizar la herramienta de "Generate Bitstream" de la ventana "Flow Navigator".
-   Ejecutar todos los pasos necesarios y, al acabar, copiar los archivos .bit y .hwh resultantes en '/home/xilinx/pynq/overlays/fft/disenofinal.bit'
+   Ejecutar todos los pasos necesarios y, al acabar, copiar los archivos .bit y .hwh resultantes en '/home/xilinx/pynq/overlays/fft'
