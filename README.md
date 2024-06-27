@@ -9,9 +9,9 @@ En este TFG, abordaremos ambas perspectivas (software y hardware) y extraeremos 
 
 ### Requisitos
 
-- Vivado 2023.1
-- Plataforma Pynq (por ejemplo, Pynq-Z2)
-- Python 3.x
+- Vitis Unified Software Platform (en este trabajo se ha usado la v.2023.2)
+- Placa de desarrollo compatible con PYNQ (en este trabajo se ha usado Pynq-Z2).
+- Git.
 
 ### Instrucciones
 
