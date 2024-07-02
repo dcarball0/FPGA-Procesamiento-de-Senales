@@ -4,7 +4,7 @@
 -- 
 -- Create Date: 15.06.2024 16:44:05
 -- Design Name: 
--- Module Name: axi_gain - Behavioral
+-- Module Name: AXI_Rectification - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
